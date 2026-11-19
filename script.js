@@ -119,12 +119,12 @@ document.addEventListener('click', function (e) {
       if (!ok) return;
 
       const message =
-        'Hi%2C+I+want+Token+Access+for+CODENAME+GREATER+KHARADI+and+the+PropBillion+special+offer+price.%0A%0A' +
+        'Hi%2C+I+want+Token+Access+for+CODENAME+GREATER+KHARADI+and+the+special+offer+price.%0A%0A' +
         'Name%3A+' + encodeURIComponent(name) + '%0A' +
         'Mobile%3A+%2B91+' + encodeURIComponent(mob);
 
       if (typeof gtag === 'function') { gtag('event', 'conversion', { 'send_to': 'AW-17833027272/GK_WHATSAPP_LABEL' }); }
-      window.open('https://wa.me/918857090799?text=' + message, '_blank');
+      window.open('https://wa.me/918055709079?text=' + message, '_blank');
 
       const btn = form.querySelector('button[type="submit"]');
       if (btn) {
@@ -171,12 +171,12 @@ document.addEventListener('click', function (e) {
       if (!ok) return;
 
       const message =
-        'Hi%2C+I+want+the+CODENAME+GREATER+KHARADI+PropBillion+offer+price+and+Token+Access.%0A%0A' +
+        'Hi%2C+I+want+the+CODENAME+GREATER+KHARADI+special+offer+price+and+Token+Access.%0A%0A' +
         'Name%3A+' + encodeURIComponent(name) + '%0A' +
         'Mobile%3A+%2B91+' + encodeURIComponent(mob);
 
       if (typeof gtag === 'function') { gtag('event', 'conversion', { 'send_to': 'AW-17833027272/GK_WHATSAPP_LABEL' }); }
-      window.open('https://wa.me/918857090799?text=' + message, '_blank');
+      window.open('https://wa.me/918055709079?text=' + message, '_blank');
 
       const btn = heroForm.querySelector('button[type="submit"]');
       if (btn) {
