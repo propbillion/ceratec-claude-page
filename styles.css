@@ -5422,3 +5422,110 @@ letter-spacing: 0.045em !important;
 .price-card.tier-2, .price-card.tier-2:hover, .plan-card.tier-2, .plan-card.tier-2:hover { border-left: 5px solid #2F6FD6 !important; }
 .price-card.tier-3, .price-card.tier-3:hover, .plan-card.tier-3, .plan-card.tier-3:hover { border-left: 5px solid #9BBF2A !important; }
 .price-card.tier-4, .price-card.tier-4:hover, .plan-card.tier-4, .plan-card.tier-4:hover { border-left: 5px solid #13306B !important; }
+
+/* ============================================================
+   GREATER KHARADI v2 - header logo, hero legacy line, premium hero pillars
+   ============================================================ */
+/* Header logo image - fits inside the 68px / 60px header row */
+.logo.logo-img { display: flex; align-items: center; height: 100%; padding: 6px 0; line-height: 0; }
+.logo.logo-img img { display: block; height: 58px; width: auto; max-width: none; background: transparent !important; content-visibility: visible; }
+@media (max-width: 520px) { .logo.logo-img img { height: 50px; } }
+@media (max-width: 520px) { .hero-mainline em.hero-legacy-line { font-size: 12px; letter-spacing: 0.08em; } }
+@media (max-width: 380px) { .logo.logo-img img { height: 46px; } .hero-mainline em.hero-legacy-line { font-size: 11px; letter-spacing: 0.05em; } }
+
+/* Hero heading - legacy line on its own row */
+.hero-mainline em.hero-legacy-line {
+  display: block;
+  margin-top: 0.6rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(14px, 1.9vw, 22px);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #F3D9A4;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.6);
+}
+
+/* Hero pillars - 3 stat tiles + token ribbon */
+.hero-usp-strip.hero-pillars {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem !important;
+  max-width: 520px;
+  margin: 1.75rem auto 0 !important;
+}
+.hero-usp-strip.hero-pillars li {
+  text-shadow: none !important;
+  letter-spacing: normal !important;
+  border-radius: 10px !important;
+}
+.hero-usp-strip.hero-pillars li.hp-tile {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.25rem;
+  padding: 0.95rem 0.5rem 0.85rem !important;
+  background: linear-gradient(160deg, rgba(8,22,19,0.78) 0%, rgba(8,22,19,0.58) 100%) !important;
+  border: 1px solid rgba(214,180,120,0.55) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.12) inset, 0 18px 40px -18px rgba(0,0,0,0.7);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+}
+.hp-num {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: clamp(28px, 3.4vw, 38px);
+  font-weight: 600;
+  line-height: 1;
+  color: #F3D9A4;
+}
+.hp-lbl {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.hero-usp-strip.hero-pillars li.hp-token {
+  grid-column: 1 / -1;
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+  padding: 0.75rem 1rem !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase;
+  color: #1d1406 !important;
+  background: linear-gradient(100deg, #C9A35E 0%, #F3D9A4 50%, #C9A35E 100%) !important;
+  border: 1px solid rgba(255,236,190,0.9) !important;
+  box-shadow: 0 14px 34px -14px rgba(201,163,94,0.75);
+}
+.hp-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #b1392e;
+  box-shadow: 0 0 0 0 rgba(177,57,46,0.6);
+  animation: hpPulse 1.8s ease-out infinite;
+  flex-shrink: 0;
+}
+@keyframes hpPulse {
+  0% { box-shadow: 0 0 0 0 rgba(177,57,46,0.6); }
+  100% { box-shadow: 0 0 0 10px rgba(177,57,46,0); }
+}
+@media (max-width: 520px) {
+  .hero-usp-strip.hero-pillars { gap: 0.45rem !important; }
+  .hero-usp-strip.hero-pillars li.hp-tile { padding: 0.75rem 0.3rem 0.7rem !important; }
+  .hp-num { font-size: 26px; }
+  .hp-lbl { font-size: 9.5px; letter-spacing: 0.16em; }
+  .hero-usp-strip.hero-pillars li.hp-token { font-size: 10.5px !important; letter-spacing: 0.1em !important; padding: 0.65rem 0.6rem !important; }
+}
+@media (prefers-reduced-motion: reduce) { .hp-dot { animation: none; } }
+
+/* v2 - mobile legacy line + config pill contrast (kept last to win the cascade) */
+p.hero-headline-v2.hero-config-pill {
+  background: linear-gradient(160deg, rgba(8,22,19,0.72) 0%, rgba(8,22,19,0.52) 100%) !important;
+  border: 1px solid rgba(214,180,120,0.55) !important;
+}
+p.hero-headline-v2.hero-config-pill em { color: #F3D9A4 !important; font-weight: 700 !important; }
+@media (max-width: 520px) {
+  .hero-mainline em.hero-legacy-line { font-size: 12px; letter-spacing: 0.06em; }
+}
+@media (max-width: 380px) {
+  .hero-mainline em.hero-legacy-line { font-size: 11px; letter-spacing: 0.03em; }
+}
